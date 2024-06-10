@@ -18,6 +18,7 @@
       "@/style/*": ["./src/styles/*"],
       "@/feature/*": ["./src/components/features/*"],
       "@/layout/*": ["./src/components/layouts/*"],
+      "@/action/*": ["./src/actions/*"],
       "@/module/*": ["./src/components/modules/*"],
       "@/element/*": ["./src/components/elements/*"],
       "@/icon/*": ["./src/components/icons/*"],
