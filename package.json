@@ -9,7 +9,15 @@
     "lint": "npm-run-all format check-types next-lint",
     "next-lint": "next lint",
     "format": "prettier --check --write \"src/**/*.{ts,tsx}\"",
-    "check-types": "tsc --noemit"
+    "check-types": "tsc --noemit",
+    "supabase:gen-local-types": "npm-run-all supabase:gen-local-types--no-format supabase:format-types",
+    "supabase:gen-local-types--no-format": "supabase gen types --lang=typescript --local > src/types/supabase.ts",
+    "supabase:format-types": "prettier --write src/types/supabase.ts",
+    "supabase:reset": "npm-run-all supabase:reset-db supabase:seed",
+    "supabase:reset-linked": "npm-run-all supabase:reset-db-linked supabase:seed",
+    "supabase:reset-db": "supabase db reset",
+    "supabase:reset-db-linked": "supabase db reset --linked",
+    "supabase:seed": "tsx src/scripts/seed.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.3.0",
