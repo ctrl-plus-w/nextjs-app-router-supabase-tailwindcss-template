@@ -33,6 +33,8 @@
     "^@/image/(.*)$",
     "^@/font/(.*)$",
 
+    "^@/(.*)$",
+
     "^(\\.\\./)+"
   ],
   "importOrderSeparation": true,
